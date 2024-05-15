@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Расширенное Портфолио</title>
+    <style>
+        body {
+    padding-top: 56px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/bg_site.jpg');
+    background-size: cover; /* Обеспечивает покрытие всего доступного пространства */
+    background-repeat: no-repeat; /* Убирает повторение изображения */
+}
+
+        .portfolio-item {
+            margin-bottom: 30px;        
+        }
+
+        .title {
+            color:antiquewhite
+        }
+        .logo {
+            width: 50px;
+            margin: 10px;
+        }
+        
+
+        .bg-text {
+            background-color: rgba(0, 0, 0, 0.51);
+            width: 60%;
+        }
+
+        .cont {
+            width: 100%;
+            
+        }
+
+        #home {
+            margin-top: 40px;
+    background: url('/first_image.jpg') no-repeat center center; /* Укажите путь к вашему изображению */
+    background-size: cover; /* Покрывает весь блок изображением */
+    height: 400px; /* Высота блока */
+    margin-right: 0; /* Удаление отступа справа */
+    margin-left: 0; /* Удаление отступа слева */
+}
+
+@media (max-width: 768px) {
+    #home {
+        height: 200px; /* Меньшая высота для мобильных устройств */
+        margin-bottom: 0; /* Убираем отступ снизу */
+    }
+}
+
+.text_1 {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.751);
+    padding: 50px;
+}
+
+.sh_b {
+    box-shadow: 3px 3px 3px #000000;
+}
+
+.portfolio-item {
+    margin-bottom: 30px; /* Добавляет расстояние между элементами колонки */
+    background: #fff; /* Фоновый цвет для лучшей видимости тени */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень для создания "плавающего" эффекта */
+    border-radius: 5px; /* Скругление углов блока */
+    transition: transform 0.3s ease-in-out; /* Анимация для наведения */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Поднимает блок при наведении */
+}
+
+.descr {
+    padding: 15px; /* Внутренний отступ для текстового описания внутри блока */
+}
+
+.bg-light {
+    background-color: #f8f9fa!important; /* Серый фон для блока */
+}
+
+.carousel-item img {
+    width: 100px; /* Установите подходящий размер для изображений */
+    height: auto; /* Поддержание пропорций изображения */
+}
+.colors {
+    color:#f8f9fa
+}
+
+#video .row {
+    display: flex;
+    justify-content: center; /* Центрирует колонки внутри строки */
+}
+
+#video iframe {
+    width: 100%; /* Делает iframe шириной в 100% своей колонки */
+    max-width: 560px; /* Максимальная ширина, чтобы видео не выглядело слишком большим */
+    height: 315px; /* Высота iframe */
+    margin: auto; /* Автоматические отступы для центрирования по горизонтали */
+}
+
+#testimonials .card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Добавляет тень для визуального "выделения" карточек */
+    transition: all 0.3s ease-in-out; /* Плавное изменение при наведении */
+}
+
+#testimonials .card:hover {
+    transform: scale(1.05); /* Незначительно увеличивает карточку при наведении */
+}
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img class="logo" src="/settings.png" alt="" srcset=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item p-2">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#about">About me</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="#contact">Contacts</a>
+                </li>
+            </ul>
+            <button class="btn btn-outline-success ms-auto" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
+        </div>
+    </div>
+</nav>
+
+<div class="ccontainer-fluid p-0 cont" id="home">
+    <div class="rrow g-0">
+        <div class="col-12  d-flex justify-content-center align-items-center">
+            <div class="text-center pt-5 text_1">
+            <h1 class="title">Welcome to my portfolio!</h1>
+            <p class="title">Here you will find examples of my works and projects</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5 pb-5" id="about">
+    <div class="row">
+        <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center">
+            <h2>About me</h2>
+            I am a professional web developer with over five years of experience in designing and developing user interfaces, testing, debugging, and training staff within eCommerce technologies. Proven ability in optimizing web functionalities that improve data retrieval and workflow efficiencies.</p>
+        </div>
+        <div class="col-lg-6">
+            <img class="img-fluid" src="/img_2.jpg" alt="About Me Image"> <!-- Пример alt текста -->
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5" id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="row">
+        <div class="col-md-4 portfolio-item p-2 sh_b">
+            <img src="/Screenshot_11.jpg" class="img-fluid" alt="Проект 1">
+            <div class="descr pt-3">
+                <h4>Dynamic Web Interface</h4>
+                <p>This project showcases a dynamic web interface designed for a high-traffic eCommerce platform. It features advanced AJAX-powered filtering options, real-time data updates, and a responsive layout that ensures optimal user experience across all devices.</p>
+            </div>
+        </div>
+        <div class="col-md-4 portfolio-item p-2 sh_b">
+            <img src="/Screenshot_2.jpg" class="img-fluid" alt="Проект 2">
+            <div class="descr pt-3">
+                <h4>Mobile App Revamp</h4>
+                <p>A complete overhaul of a popular mobile application, enhancing usability and adding new features such as in-app purchases, custom notifications, and an improved user feedback system. This revamp significantly increased user engagement by 40% within the first three months post-launch.</p>
+            </div>           
+        </div>
+        <div class="col-md-4 portfolio-item p-2 sh_b">
+            <img src="/Screenshot_3.jpg" class="img-fluid" alt="Проект 3">
+            <div class="descr pt-3">
+                <h4>Cloud Integration Solutions</h4>
+                <p>Developed a suite of cloud integration tools for a SaaS company, facilitating seamless data synchronization across multiple platforms. This project improved client data handling capabilities, ensuring robust security and compliance with international data protection regulations.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container pt-5 pb-5 text-center" id="video">
+    <h2 class="text-center mb-4">Watch My Project Overview</h2>
+    <div class="row">
+        <div class="col-12">
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/salY_Sm6mv4" title="HTML in 5 minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        </div>
+    </div>
+</div>
+
+
+<div class="container pt-5" id="testimonials">
+    <h2 class="text-center mb-4">Отзывы клиентов и рекомендации</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="/user_1.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px; height: 100px; object-fit: cover;" alt="User Image">
+                <div class="card-body">
+                    <p class="card-text">"Working with [Your Name] on our website redesign project was an absolute pleasure. Not only did they deliver high-quality work on time, but their attention to detail was phenomenal. They went above and beyond to ensure our site was not only functional but also visually appealing. I highly recommend [Your Name] for any serious web development projects."</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="/user_2.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px; height: 100px; object-fit: cover;" alt="User Image">
+                <div class="card-body">
+                    <p class="card-text">"I was truly impressed with [Your Name]'s professionalism and skill level when developing our e-commerce platform. They brought fresh ideas that were crucial for our project's success. [Your Name] consistently met all deadlines and was incredibly responsive to our needs throughout the project. It's rare to find such a reliable and dedicated developer."</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="/user_3.jpeg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px; height: 100px; object-fit: cover;" alt="User Image">
+                <div class="card-body">
+                    <p class="card-text">"[Your Name] has been a critical asset to our software development team. Their ability to solve complex problems with innovative solutions has significantly improved our product's performance. [Your Name] is not only technically skilled but also easy to work with and always willing to take the time to discuss my concerns and respond to questions."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid py-5 bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-4 colors">Frontend Technologies</h2>
+        <div id="techCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/figma_logo_icon_170157.png" class="d-block mx-auto" alt="HTML5">
+                </div>
+                <div class="carousel-item">
+                    <img src="/gitlab_original_logo_icon_146503.png" class="d-block mx-auto" alt="CSS3">
+                </div>
+                <div class="carousel-item">
+                    <img src="/sass.png" class="d-block mx-auto" alt="JavaScript">
+                </div>
+                <div class="carousel-item">
+                    <img src="/react_logo_icon_144942.png" class="d-block mx-auto" alt="React.js">
+                </div>
+                <div class="carousel-item">
+                    <img src="/JavaScript-Emblem.png" class="d-block mx-auto" alt="JavaScript">
+                </div>
+                <div class="carousel-item">
+                    <img src="/react_logo_icon_144942.png" class="d-block mx-auto" alt="React.js">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#techCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container pt-5 pb-5" id="contact">
+    <h2>Contacts</h2>
+    <p>You can contact me through the following channels:</p>
+    <ul>
+        <li>Email: example@example.com</li>
+        <li>Telephone +7 123 456 7890</li>
+    </ul>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Feedback form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
